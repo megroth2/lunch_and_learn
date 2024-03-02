@@ -83,3 +83,4 @@ _____
 - [VCR](https://github.com/vcr/vcr) is used to generate fixture files known as "cassettes" which are used to mock api calls in the test enviornment
 - [bcrypt](https://github.com/bcrypt-ruby/bcrypt-ruby) is used to ensure secure login functionality with encrypted passwords.
 - [Faraday](https://github.com/lostisland/faraday) is used to make api connections.
+- [JSON-API-Serializer](https://github.com/jsonapi-serializer/jsonapi-serializer) is used to serialize data.
