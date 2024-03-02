@@ -59,6 +59,11 @@ _____
 #### Search for Recipes by Country Name
     GET `/api/recipes/v2?type=any&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>`
 
+
+ _Optional:_ limit which fields are included in the response using this request:
+
+    GET `api/recipes/v2?type=public&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>&field=label&field=image&field=url`
+
 ### The REST Countries API
 - The [REST Countries](https://restcountries.com/#api-endpoints-v3-all) api is used to randomly select a country when none is provided. There is no api key required.
 - The base url for this api is: `https://restcountries.com`
