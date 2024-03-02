@@ -100,7 +100,10 @@ Accept: application/json
 POST /api/v1/users
 Content-Type: application/json
 Accept: application/json
+```
 
+**Request Body**
+```http
 {
   "name": "Odell",
   "email": "goodboy@ruffruff.com",
@@ -131,7 +134,10 @@ Accept: application/json
 POST /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
+```
 
+**Request Body**
+```http
 {
   "email": "goodboy@ruffruff.com",
   "password": "treats4lyf"
@@ -162,7 +168,10 @@ Accept: application/json
 POST /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
+```
 
+**Request Body**
+```http
 {
     "api_key": "jgn983hy48thw9begh98h4539h4",
     "country": "thailand",
