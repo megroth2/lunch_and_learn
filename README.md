@@ -28,22 +28,24 @@ This application exposes the following endpoints.
 
 Click here to view the [JSON contract](/JSON_Contract.md), which includes request and response samples for each of the endpoints.
 
-#### Get Recipes For A Particular Country
+Ensure you have the server running and navigate to https://localhost:3000.
+
+#### Index Recipes for a Particular Country
     GET `/api/v1/recipes?country=<COUNTRY>`
 
-#### Get Learning Resources for a Particular Country
+#### Index Learning Resources for a Particular Country
     GET `/api/v1/learning_resources?country=<COUNTRY>`
 
-#### User Registration
+#### Create User
     POST `/api/v1/users`
 
 #### Log In User
     POST `/api/v1/sessions`
 
-#### Add Favorites
+#### Add Favorite
     POST `/api/v1/favorites`
 
-#### Get a User's Favorites
+#### Index User Favorites
     GET `/api/v1/favorites?api_key=<API_KEY>`
 
 _____
@@ -62,7 +64,7 @@ _____
 
  _Optional:_ limit which fields are included in the response using this request:
 
-    GET `api/recipes/v2?type=public&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>&field=label&field=image&field=url`
+    GET `/api/recipes/v2?type=public&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>&field=label&field=image&field=url`
 
 ### The REST Countries API
 - The [REST Countries](https://restcountries.com/#api-endpoints-v3-all) api is used to randomly select a country when none is provided. There is no api key required.
