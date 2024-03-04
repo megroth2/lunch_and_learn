@@ -6,10 +6,16 @@ class RecipePoro
               :image
 
   def initialize(data, country)
+    # binding.pry
+    # @title = data[:_links][:self][:title]
+    # @url = data[:recipe][:url]
+    # @country = country
+    # @image = data[:hits][0][:recipe][:image]
+
+    # this works for recipe_poro_spec.rb
     @title = data[:hits][0][:recipe][:label]
-    @url = data[:hits][0][:recipe][:url]
-    @country = country
     @image = data[:hits][0][:recipe][:image]
+    @url = data[:hits][0][:recipe][:url]
   end
 
   # def random_select_country
