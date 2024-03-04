@@ -20,15 +20,4 @@ RSpec.describe RecipePoro do
       expect(recipe.image).to eq("https://edamam-product-images...")
     end
   end
-
-  describe "#random_select_country" do
-    xit "randomly selects a country for a recipe when none is provided", :vcr do
-      request = "/api/v1/recipes?country=thailand"
-      # simulate calling the request? or just test the response?
-
-      recipe = Recipe.last
-
-      expect(recipe.country).to eq("thailand")
-    end
-  end
 end

@@ -16,13 +16,11 @@ RSpec.describe "RecipeFacade" do
     end
   end
 
-  # describe "#get_countries" do
-  #   it "can return a list of countries" do
-  #     countries = RecipeFacade.get_countries
-  #     country = countries.first
-
-  #     expect(countries).to be_an(Array)
-  #     ....
-  #   end
-  # end
+  describe "#get_random_country" do
+    it "can return a random country", :vcr do
+      country = RecipeFacade.get_random_country
+      
+      expect(country).to be_a(String)
+    end
+  end
 end
