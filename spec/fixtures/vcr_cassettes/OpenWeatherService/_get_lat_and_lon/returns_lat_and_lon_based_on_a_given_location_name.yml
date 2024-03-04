@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.openweathermap.org/geo/1.0/direct?appid=7a627b8e6a03e3631f6da8efe34654e1&limit=1&q=Denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 04 Mar 2024 17:12:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '505'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/direct?limit=1&q=denver"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkRlbnZlciIsImxvY2FsX25hbWVzIjp7InBzIjoi2onZhtmI2LEiLCJ0ZSI6IuCwoeCxhuCwqOCxjeCwteCwsOCxjSIsImphIjoi44OH44Oz44OQ44O8IiwiZmEiOiLYr9mG2YjYsSIsInBsIjoiRGVudmVyIiwiYXIiOiLYr9mG2YHYsSIsInpoIjoi5Li55L2b5Y6/IC8g5Li55L2b6YOhIiwiZXMiOiJEZW52ZXIiLCJibiI6IuCmoeCnh+CmqOCmreCmvuCmsCIsIm9jIjoiRGVudmVyIiwidGEiOiLgrp/gr4bgrqngr43grrXgrrDgr40iLCJ1ciI6ItqI24zZhtmI2LEiLCJlbiI6IkRlbnZlciIsImVvIjoiRGVudmVybyIsIm1yIjoi4KSh4KWH4KSo4KWN4KS14KWN4KS54KSwIiwiZWwiOiLOnc+Ezq3Ovc6yzrXPgSIsInVrIjoi0JTQtdC90LLQtdGAIiwicnUiOiLQlNC10L3QstC10YAiLCJrbyI6IuuNtOuyhCIsImhpIjoi4KSh4KWF4KSo4KS14KSwIn0sImxhdCI6MzkuNzM5MjM2NCwibG9uIjotMTA0Ljk4NDg2MiwiY291bnRyeSI6IlVTIiwic3RhdGUiOiJDb2xvcmFkbyJ9XQ==
+  recorded_at: Mon, 04 Mar 2024 17:12:34 GMT
+- request:
+    method: get
+    uri: http://api.openweathermap.org/geo/1.0/direct?appid=7a627b8e6a03e3631f6da8efe34654e1&limit=1&q=Denver
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 04 Mar 2024 17:12:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '505'
+      Connection:
+      - keep-alive
+      X-Cache-Key:
+      - "/geo/1.0/direct?limit=1&q=denver"
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Allow-Methods:
+      - GET, POST
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkRlbnZlciIsImxvY2FsX25hbWVzIjp7InBzIjoi2onZhtmI2LEiLCJ0ZSI6IuCwoeCxhuCwqOCxjeCwteCwsOCxjSIsImphIjoi44OH44Oz44OQ44O8IiwiZmEiOiLYr9mG2YjYsSIsInBsIjoiRGVudmVyIiwiYXIiOiLYr9mG2YHYsSIsInpoIjoi5Li55L2b5Y6/IC8g5Li55L2b6YOhIiwiZXMiOiJEZW52ZXIiLCJibiI6IuCmoeCnh+CmqOCmreCmvuCmsCIsIm9jIjoiRGVudmVyIiwidGEiOiLgrp/gr4bgrqngr43grrXgrrDgr40iLCJ1ciI6ItqI24zZhtmI2LEiLCJlbiI6IkRlbnZlciIsImVvIjoiRGVudmVybyIsIm1yIjoi4KSh4KWH4KSo4KWN4KS14KWN4KS54KSwIiwiZWwiOiLOnc+Ezq3Ovc6yzrXPgSIsInVrIjoi0JTQtdC90LLQtdGAIiwicnUiOiLQlNC10L3QstC10YAiLCJrbyI6IuuNtOuyhCIsImhpIjoi4KSh4KWF4KSo4KS14KSwIn0sImxhdCI6MzkuNzM5MjM2NCwibG9uIjotMTA0Ljk4NDg2MiwiY291bnRyeSI6IlVTIiwic3RhdGUiOiJDb2xvcmFkbyJ9XQ==
+  recorded_at: Mon, 04 Mar 2024 17:12:35 GMT
+recorded_with: VCR 6.2.0

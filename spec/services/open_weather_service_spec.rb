@@ -14,11 +14,10 @@ RSpec.describe OpenWeatherService do
     end
   end
 
-  xdescribe "#get_lat_and_lon" do
-    it "returns lat and lon based on a given location name" do
-      location_name = "Denver"
+  describe "#get_lat_and_lon" do
+    it "returns lat and lon based on a given location name", :vcr do
+      capital = "Denver"
 
-      # binding.pry
       lat = @weather_service.get_lat_and_lon(capital).first[:lat].round(2) # where is the best place to round?
       lon = @weather_service.get_lat_and_lon(capital).first[:lon].round(2) # where is the best place to round?
 
