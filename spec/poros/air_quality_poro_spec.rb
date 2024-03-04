@@ -21,7 +21,29 @@ RSpec.describe AirQualityPoro do
 
   describe "#set_readable_aqi" do
     it "sets readable aqi" do
+      data = {
+          "air_quality": {
+              "aqi": "1",
+              "datetime": "1709570208"
+          }
+      }
 
+      air_quality = AirQualityPoro.new(data)
+
+      expect(air_quality.readable_aqi).to eq("Good")
+    end
+
+    it "dynamically sets readable aqi" do
+      data = {
+          "air_quality": {
+              "aqi": "4",
+              "datetime": "1709570208"
+          }
+      }
+
+      air_quality = AirQualityPoro.new(data)
+
+      expect(air_quality.readable_aqi).to eq("Poor")
     end
   end
 end
