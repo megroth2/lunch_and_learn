@@ -14,14 +14,22 @@ RSpec.describe OpenWeatherService do
     end
   end
 
-  describe "#get_lat_and_lon" do
+  describe "#get_lat" do
+  it "returns lat and lon based on a given location name", :vcr do
+    capital = "Denver"
+
+    lat = @weather_service.get_lat(capital)
+
+    expect(lat).to eq(39.74)
+  end
+end
+
+  describe "#get_lon" do
     it "returns lat and lon based on a given location name", :vcr do
       capital = "Denver"
 
-      lat = @weather_service.get_lat_and_lon(capital).first[:lat].round(2) # where is the best place to round?
-      lon = @weather_service.get_lat_and_lon(capital).first[:lon].round(2) # where is the best place to round?
+      lon = @weather_service.get_lon(capital)
 
-      expect(lat).to eq(39.74)
       expect(lon).to eq(-104.98)
     end
   end
@@ -38,8 +46,8 @@ RSpec.describe OpenWeatherService do
     it "returns the current aqi for a given city", :vcr do
       capital = @country_service.get_countries.first[:capital].first
 
-      lat = @weather_service.get_lat_and_lon(capital).first[:lat].round(2) # where is the best place to round?
-      lon = @weather_service.get_lat_and_lon(capital).first[:lon].round(2) # where is the best place to round?
+      lat = @weather_service.get_lat(capital)
+      lon = @weather_service.get_lon(capital)
       
       current_aqi = @weather_service.get_current_aqi(lat, lon)[:list].first[:main][:aqi]
 

@@ -1,6 +1,6 @@
 class OpenWeatherService
 
-  def conn(location_name) # for get_lat_and_lon
+  def conn(location_name) # for get_lat and get_lon
     Faraday.new(url: 'http://api.openweathermap.org/geo/1.0/direct') do |faraday|
       faraday.params['q'] = location_name
       faraday.params['limit'] = 1
@@ -8,10 +8,16 @@ class OpenWeatherService
     end
   end
 
-  def get_lat_and_lon(location_name)
+  def get_lat(location_name)
     response = conn(location_name).get
     json_response = JSON.parse(response.body, symbolize_names: true)
-    # where does lat and lon get stored to pass it to the next method?
+    lat = json_response.first[:lat].round(2)
+  end
+
+  def get_lon(location_name)
+    response = conn(location_name).get
+    json_response = JSON.parse(response.body, symbolize_names: true)
+    lon = json_response.first[:lon].round(2)
   end
 
   def conn_2(lat, lon) # for get_current_aqi
