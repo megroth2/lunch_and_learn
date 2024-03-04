@@ -19,7 +19,7 @@ RSpec.describe "Api::V1::AirQualities" do
       expect(air_quality[:attributes][:aqi]).to be_an(Integer)
 
       expect(air_quality[:attributes]).to have_key(:datetime)
-      expect(air_quality[:attributes][:datetime]).to be_a(String)
+      expect(air_quality[:attributes][:datetime]).to be_an(Integer)
 
       expect(air_quality[:attributes]).to have_key(:readable_aqi)
       expect(air_quality[:attributes][:readable_aqi]).to be_a(String)

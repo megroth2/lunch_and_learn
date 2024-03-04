@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 04 Mar 2024 18:34:56 GMT
+      - Mon, 04 Mar 2024 20:20:45 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -38,6 +38,6 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"coord":{"lon":-104.98,"lat":39.74},"list":[{"main":{"aqi":2},"components":{"co":243.66,"no":2.29,"no2":7.71,"o3":91.55,"so2":3.04,"pm2_5":2.98,"pm10":6.85,"nh3":2.5},"dt":1709577240}]}'
-  recorded_at: Mon, 04 Mar 2024 18:34:56 GMT
+      string: '{"coord":{"lon":-104.98,"lat":39.74},"list":[{"main":{"aqi":3},"components":{"co":236.99,"no":1.62,"no2":5.83,"o3":101.57,"so2":2.65,"pm2_5":4.31,"pm10":10.52,"nh3":2},"dt":1709583645}]}'
+  recorded_at: Mon, 04 Mar 2024 20:20:45 GMT
 recorded_with: VCR 6.2.0
