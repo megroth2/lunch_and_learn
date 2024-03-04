@@ -32,8 +32,8 @@ RSpec.describe "Api::V1::Recipes" do
       end
     end
 
-    # x'ing this out because the vcr cassette has to be deleted every time in order to pass
-    xit "sends a list of recipes for a random country if none is provided", :vcr do
+    # vcr cassette has to be deleted every time in order to pass
+    it "sends a list of recipes for a random country if none is provided", :vcr do
       get "/api/v1/recipes?country="
 
       expect(response).to have_http_status(:success)

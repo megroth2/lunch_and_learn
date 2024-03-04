@@ -4,13 +4,7 @@ class Api::V1::AirQualitiesController < ApplicationController
     lat = WeatherFacade.get_lat(country)
     lon = WeatherFacade.get_lon(country)
     # air_quality_data = WeatherFacade.get_current_aqi(lat, lon)
-    # this is returning 1 instead of what we need to create a poro:
-    #       # data = {
-    #       #       "air_quality": {
-    #       #         "aqi": "2",
-    #       #         "datetime": "1709570208"
-    #       #     }
-    #       # }
+    # above is returning 1 instead of what we need to create a poro below
 
     air_quality_data = {
         "air_quality": {
