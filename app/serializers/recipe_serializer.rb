@@ -3,17 +3,17 @@ class RecipeSerializer
 
   attributes :title, :url, :country, :image
 
-  def self.format_recipes(recipes)
+  def self.format_recipes(recipes, country)
     {
       data: recipes.map do |recipe|
         {
-          id: recipe.id,
+          id: nil,
           type: "recipe",
           attributes: {
-            title: recipe.title,
-            url: recipe.url,
-            country: recipe.country,
-            image: recipe.image
+            title: recipe[:recipe][:label],
+            url: recipe[:recipe][:url],
+            country: country,
+            image: recipe[:recipe][:image]
           }
         }
       end

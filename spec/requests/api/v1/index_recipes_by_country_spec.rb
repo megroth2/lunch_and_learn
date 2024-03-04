@@ -2,20 +2,18 @@ require "rails_helper"
 
 RSpec.describe "Api::V1::Recipes" do
   describe "[happy paths]" do
-    xit "sends a list of recipes for a particular country", :vcr do
-      get "/api/v1/recipes?country=thailand" # 404 Not Found
+    it "sends a list of recipes for a particular country", :vcr do
+      get "/api/v1/recipes?country=thailand"
 
-      # binding.pry
-
-      expect(response).to be_successful
+      expect(response).to have_http_status(:success)
 
       recipes = JSON.parse(response.body, symbolize_names:true)[:data]
 
-      expect(recipes.count).to eq() # ?
+      expect(recipes.count).to_not eq(0) # ?
 
       recipes.each do |recipe|
         expect(recipe).to have_key(:id)
-        expect(recipe[:id]).to eq(nil) # does this have to be null like it is in the json contract sample?
+        expect(recipe[:id]).to eq(nil)
 
         expect(recipe).to have_key(:type)
         expect(recipe[:type]).to eq("recipe")
@@ -31,7 +29,6 @@ RSpec.describe "Api::V1::Recipes" do
 
         expect(recipe[:attributes]).to have_key(:image)
         expect(recipe[:attributes][:image]).to be_a(String)
-
       end
     end
   end

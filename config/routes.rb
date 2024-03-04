@@ -10,13 +10,15 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :users do
-	      resources :favorites, only: [:index, :create]
-      end
-      
-      resources :recipes do
- 	      resources :favorites, only: [:index]
-      end
+      get '/recipes', to: 'recipes#index'
+
+      # resources :users do
+	    #   resources :favorites, only: [:index, :create]
+      # end
+
+      # resources :recipes do
+ 	    #   resources :favorites, only: [:index]
+      # end
     end
   end
 end
