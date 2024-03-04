@@ -72,8 +72,8 @@ end
     add_group "Facades", "app/facades"
     add_group "Serializers", "app/serializers"
     add_group "Poros", "app/poros"
+    add_group "Services", "app/services"
     
-
     add_filter "app/mailers/"
     add_filter "app/jobs/"
     add_filter "app/channels/"
