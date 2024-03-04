@@ -1,7 +1,7 @@
 class RecipeFacade
 
   def self.get_recipes(country)
-    service = RecipeService.new
+    service = EdemamService.new
     json_response = service.get_recipes(country)
 
     # binding.pry

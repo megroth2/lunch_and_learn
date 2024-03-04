@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe RecipeService do
+RSpec.describe EdemamService do
   before(:each) do
-    @service = RecipeService.new
+    @service = EdemamService.new
   end
 
   describe "#conn" do
@@ -10,19 +10,6 @@ RSpec.describe RecipeService do
 
     end
   end
-
-  # describe '#get_url' do
-  #   it "parses the JSON response body", :vcr do
-  #     url = 'https://example.com'
-  #     response_body = '{"key": "value"}'
-  #     parsed_response = { key: 'value' }
-
-  #     recipe_service = RecipeService.new
-  #     parsed_json = recipe_service.get_url(url)
-
-  #     expect(parsed_json).to eq(parsed_response)
-  #   end
-  # end
 
   it "returns recipe data by country", :vcr do
     search = @service.get_recipes("thailand")
