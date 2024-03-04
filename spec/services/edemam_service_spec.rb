@@ -5,9 +5,10 @@ RSpec.describe EdemamService do
     @service = EdemamService.new
   end
 
-  describe "#conn" do
-    it "" do
-
+  xdescribe "#conn" do
+    it "connects successfully", :vcr do
+      # binding.pry
+      expect(@service.conn.get.status).to eq(200)
     end
   end
 
