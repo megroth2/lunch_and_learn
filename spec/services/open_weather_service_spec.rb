@@ -1,30 +1,50 @@
 require "rails_helper"
 
 RSpec.describe OpenWeatherService do
+
   before(:each) do
-    @service = OpenWeatherService.new
+    @weather_service = OpenWeatherService.new
+    @country_service = RestCountriesService.new
   end
 
   describe "#conn" do
     it "connects successfully", :vcr do
-      expect(@service.conn.get.status).to eq(200)
+      location_name = "Denver"
+      expect(@weather_service.conn(location_name).get.status).to eq(200)
     end
   end
 
-  it "returns weather data by country", :vcr do
-    # search = @service.get_recipes("thailand")
+  xdescribe "#get_lat_and_lon" do
+    it "returns lat and lon based on a given location name" do
+      location_name = "Denver"
 
-    # expect(search).to be_an(Array)
-    
-    # recipe = search.first[:recipe]
+      # binding.pry
+      lat = @weather_service.get_lat_and_lon(capital).first[:lat].round(2) # where is the best place to round?
+      lon = @weather_service.get_lat_and_lon(capital).first[:lon].round(2) # where is the best place to round?
 
-    # expect(recipe).to have_key(:label)
-    # expect(recipe[:label]).to be_a(String)
+      expect(lat).to eq(39.74)
+      expect(lon).to eq(-104.98)
+    end
+  end
 
-    # expect(recipe).to have_key(:url)
-    # expect(recipe[:url]).to be_a(String)
+  describe "#conn_2" do
+    it "connects successfully", :vcr do
+      lat = 39.74
+      lon = -104.98
+      expect(@weather_service.conn_2(lat, lon).get.status).to eq(200)
+    end
+  end
 
-    # expect(recipe).to have_key(:image)
-    # expect(recipe[:image]).to be_a(String)
+  describe "#get_current_aqi" do
+    it "returns the current aqi for a given city", :vcr do
+      capital = @country_service.get_countries.first[:capital].first
+
+      lat = @weather_service.get_lat_and_lon(capital).first[:lat].round(2) # where is the best place to round?
+      lon = @weather_service.get_lat_and_lon(capital).first[:lon].round(2) # where is the best place to round?
+      
+      current_aqi = @weather_service.get_current_aqi(lat, lon)[:list].first[:main][:aqi]
+
+      expect(current_aqi).to be_an(Integer)
+    end
   end
 end
