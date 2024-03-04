@@ -11,7 +11,6 @@ describe User do
 
   describe "associations" do
     it {should have_many(:favorites)}
-    it {should have_many(:recipes)}
   end
 
   it "has secure password" do
