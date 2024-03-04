@@ -16,9 +16,13 @@ RSpec.describe RestCountriesService do
 
     expect(countries).to be_an(Array)
 
-    country = countries.first[:name]
+    country = countries.first
 
-    expect(country).to have_key(:common)
-    expect(country[:common]).to be_a(String)
+    expect(country).to have_key(:name)
+    expect(country[:name]).to have_key(:common)
+    expect(country[:name][:common]).to be_a(String)
+
+    expect(country).to have_key(:capital)
+    expect(country[:capital].first).to be_a(String)
   end
 end
