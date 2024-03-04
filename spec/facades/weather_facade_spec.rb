@@ -23,14 +23,13 @@ RSpec.describe "WeatherFacade" do
   end
 
   describe "#get_current_aqi" do
-    xit "can return the current aqi for a given lat and lon", :vcr do
-      lat = 
-      lon = 
+    it "can return the current aqi for a given lat and lon", :vcr do
+      lat = 39.74
+      lon = -104.98
 
       current_aqi = WeatherFacade.get_current_aqi(lat, lon)
-      binding.pry
   
-      expect(current_aqi).to be_a(String)
+      expect(current_aqi).to be_an(Integer)
   
       # air_quality_poro.rb - create a poro and test the structure + contents of the poro that is created
   

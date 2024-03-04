@@ -49,7 +49,8 @@ end
       lat = @weather_service.get_lat(capital)
       lon = @weather_service.get_lon(capital)
       
-      current_aqi = @weather_service.get_current_aqi(lat, lon)[:list].first[:main][:aqi]
+      json_response = @weather_service.get_current_aqi(lat, lon)
+      current_aqi = json_response[:list].first[:main][:aqi]
 
       expect(current_aqi).to be_an(Integer)
     end
