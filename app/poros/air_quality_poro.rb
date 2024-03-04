@@ -1,7 +1,8 @@
 class AirQualityPoro
-  attr_reader :aqi, :datetime, :readable_aqi
+  attr_reader :id, :aqi, :datetime, :readable_aqi
 
   def initialize(data)
+    @id = nil
     @aqi = data[:air_quality][:aqi].to_i
     @datetime = data[:air_quality][:datetime]
     @readable_aqi = set_readable_aqi
