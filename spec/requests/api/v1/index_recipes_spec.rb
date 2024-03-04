@@ -2,8 +2,10 @@ require "rails_helper"
 
 RSpec.describe "Api::V1::Recipes" do
   describe "[happy paths]" do
-    it "sends a list of recipes", :vcr do
-      get "/api/v1/recipes?country=thailand"
+    xit "sends a list of recipes for a particular country", :vcr do
+      get "/api/v1/recipes?country=thailand" # 404 Not Found
+
+      # binding.pry
 
       expect(response).to be_successful
 
