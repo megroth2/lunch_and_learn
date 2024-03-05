@@ -11,11 +11,7 @@ class PlaceFacade
     service = GeoapifyService.new
     json_response = service.get_places(country_poro)
 
-    response = conn.get
-
-    json = JSON.parse(response.body, symbolize_names: true)[:features]
-
-    json.map do |place|
+    places = json_response.map do |place|
       place = PlacePoro.new(place)
     end
   end

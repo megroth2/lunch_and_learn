@@ -22,9 +22,9 @@ RSpec.describe "PlaceFacade" do
               12.83333333
           ]
       }
-      country = CountryPoro.new(data)
+      country_poro = CountryPoro.new(data)
 
-      places = PlaceFacade.get_places(country)
+      places = PlaceFacade.get_places(country_poro)
       place = places.first
 
       expect(places).to be_an(Array)

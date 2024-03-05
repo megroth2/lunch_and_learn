@@ -37,9 +37,9 @@ RSpec.describe GeoapifyService do
 
     places = @service.get_places(@country_poro)
 
-    expect(places[:features]).to be_an(Array)
+    expect(places).to be_an(Array)
 
-    place = places[:features].first[:properties]
+    place = places.first[:properties]
 
     expect(place).to have_key(:name)
     expect(place[:name]).to be_a(String)

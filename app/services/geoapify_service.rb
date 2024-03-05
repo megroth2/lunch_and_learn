@@ -10,7 +10,7 @@ class GeoapifyService
 
   def get_url(url, country_poro)
     response = conn(country_poro).get(url) 
-    JSON.parse(response.body, symbolize_names: true)
+    JSON.parse(response.body, symbolize_names: true)[:features]
   end
 
   def get_places(country_poro)
