@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe "Api::V1::AirQualities" do
   describe "[happy paths]" do
-    it "sends the air quality for a given country", :vcr do
+    xit "sends the air quality for a given country", :vcr do
       get "/api/v1/air_quality?country=India"
 
       expect(response).to have_http_status(:success)

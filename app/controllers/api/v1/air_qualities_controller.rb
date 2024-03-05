@@ -2,20 +2,11 @@ class Api::V1::AirQualitiesController < ApplicationController
   def index
     country = params[:country]
 
-    lat = WeatherFacade.get_lat(country)
-    lon = WeatherFacade.get_lon(country)
+    # lat = 
+    # lng = 
 
-    air_quality_poro = WeatherFacade.get_current_aqi(lat, lon)
-    # binding.pry
+    air_quality_poro = WeatherFacade.get_current_aqi(lat, lng)
 
-    # above is returning "1" instead of what we need to create a poro below
-
-    # air_quality_poro = {
-    #     "air_quality": {
-    #         "aqi": "2",
-    #         "datetime": "1709570208"
-    #     }
-    # }
     # air_quality_poro = AirQualityPoro.new(air_quality_data) # the poro should be created in the facade
     render json: AirQualitySerializer.new(air_quality_poro)
   end

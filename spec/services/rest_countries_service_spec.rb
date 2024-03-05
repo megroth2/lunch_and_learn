@@ -24,5 +24,10 @@ RSpec.describe RestCountriesService do
 
     expect(country).to have_key(:capital)
     expect(country[:capital].first).to be_a(String)
+
+    expect(country).to have_key(:latlng)
+    expect(country[:latlng]).to be_an(Array)
+    expect(country[:latlng].first).to be_a(Float)
+    expect(country[:latlng].second).to be_a(Float)
   end
 end

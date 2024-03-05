@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://api.openweathermap.org/data/2.5/air_pollution?appid=7a627b8e6a03e3631f6da8efe34654e1&lat=39.74&lon=-104.98
+    uri: http://api.openweathermap.org/data/2.5/air_pollution?appid=7a627b8e6a03e3631f6da8efe34654e1&lat=39.74&lng=-104.98
     body:
       encoding: US-ASCII
       string: ''
@@ -15,21 +15,21 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 400
+      message: Bad Request
     headers:
       Server:
       - openresty
       Date:
-      - Mon, 04 Mar 2024 20:20:48 GMT
+      - Tue, 05 Mar 2024 05:48:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '190'
+      - '44'
       Connection:
       - keep-alive
       X-Cache-Key:
-      - "/data/2.5/air_pollution?lat=39.74&lon=-104.98"
+      - "/data/2.5/air_pollution?lat=39.74&lng=-104.98"
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Credentials:
@@ -38,6 +38,6 @@ http_interactions:
       - GET, POST
     body:
       encoding: UTF-8
-      string: '{"coord":{"lon":-104.9847,"lat":39.7392},"list":[{"main":{"aqi":3},"components":{"co":236.99,"no":1.62,"no2":5.83,"o3":101.57,"so2":2.65,"pm2_5":4.31,"pm10":10.52,"nh3":2},"dt":1709583624}]}'
-  recorded_at: Mon, 04 Mar 2024 20:20:48 GMT
+      string: '{"cod":"400","message":"Nothing to geocode"}'
+  recorded_at: Tue, 05 Mar 2024 05:48:35 GMT
 recorded_with: VCR 6.2.0
