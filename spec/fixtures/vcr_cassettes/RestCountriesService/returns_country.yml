@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.com/v3.1/name/italy?fields=name,capital,latlng
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Mar 2024 18:51:04 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '187'
+    body:
+      encoding: UTF-8
+      string: '[{"name":{"common":"Italy","official":"Italian Republic","nativeName":{"ita":{"official":"Repubblica
+        italiana","common":"Italia"}}},"capital":["Rome"],"latlng":[42.83333333,12.83333333]}]'
+  recorded_at: Tue, 05 Mar 2024 18:51:04 GMT
+recorded_with: VCR 6.2.0

@@ -11,10 +11,10 @@ class RestCountriesService
   end
 
   def get_country(country)
-    get_url("v3.1/name/#{country}")
+    get_url("v3.1/name/#{country}?fields=name,capital,latlng")
   end
 
   def get_countries
-    get_url("v3.1/all")
+    get_url("v3.1/all?fields=name,capital,latlng")
   end
 end
