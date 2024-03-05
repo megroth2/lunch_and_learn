@@ -1,7 +1,6 @@
-class Api::V1::PlacesController < ApplicationController
+class PlaceFacade
 
-  def index
-    country = CountryFacade.get_country(params[:country])
+  def self.get_places(country)
 
     conn = Faraday.new(url: "https://api.geoapify.com/v2/places") do |faraday|
       faraday.params['categories'] = "tourism"
@@ -15,10 +14,6 @@ class Api::V1::PlacesController < ApplicationController
     json = JSON.parse(response.body, symbolize_names: true)
 
     places = json[:features]
-
-    #############################
-
-    # places = PlaceFacade.get_places(lat, lng)
-    render json: PlaceSerializer.format_places(places, params[:country])
+    # iterate through json[:features] to create place poros
   end
 end
