@@ -2,7 +2,40 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.geoapify.com/v2/places?apiKey=Rails.application.credentials.geoapify%5B:key%5D&bias=proximity:30,40&categories=tourism&limit=10
+    uri: https://restcountries.com/v3.1/name/France?fields=name,capital,latlng
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 05 Mar 2024 17:09:36 GMT
+      Server:
+      - Apache/2.4.38 (Debian)
+      Cache-Control:
+      - public, immutable, max-age=31556926
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '176'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6eyJjb21tb24iOiJGcmFuY2UiLCJvZmZpY2lhbCI6IkZyZW5jaCBSZXB1YmxpYyIsIm5hdGl2ZU5hbWUiOnsiZnJhIjp7Im9mZmljaWFsIjoiUsOpcHVibGlxdWUgZnJhbsOnYWlzZSIsImNvbW1vbiI6IkZyYW5jZSJ9fX0sImNhcGl0YWwiOlsiUGFyaXMiXSwibGF0bG5nIjpbNDYuMCwyLjBdfV0=
+  recorded_at: Tue, 05 Mar 2024 17:09:36 GMT
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=Rails.application.credentials.geoapify%5B:key%5D&bias=proximity:46.0,2.0&categories=tourism&limit=10
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +52,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Tue, 05 Mar 2024 16:34:28 GMT
+      - Tue, 05 Mar 2024 17:09:36 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -50,17 +83,17 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5tqmpCz5BjA8wV5AW8ZUdYpf5yMfraG0wfyZVN55c90Kki6Yr2p60tQFQpBSgXw5gpgBCmOlgFA%2FLB01vv9TZN7WlK4LkSVW25DVOHyG2mBXdfLs6m6BTMA7FHeaQ0GxRtvweEQV77atcqa2jvU%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Zv8rovrRzDe5fC5dgbIMbJnJDLI0ZBk%2B24rjEzkhrKxMZZqJbo4wqcskg7ojgWIrYwBMTGkrdnQLs1d239PUPodl7b27RYzOx6x0jcr0h9ziRQsg0Sdzw0U5dFnnq7C3UF2femSC8HbpH17EiZg%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 85fb837d6b487c1c-DEN
+      - 85fbb6f8980b51f5-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"statusCode":401,"error":"Unauthorized","message":"Invalid apiKey"}'
-  recorded_at: Tue, 05 Mar 2024 16:34:28 GMT
+  recorded_at: Tue, 05 Mar 2024 17:09:36 GMT
 recorded_with: VCR 6.2.0
