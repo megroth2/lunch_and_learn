@@ -19,4 +19,16 @@ class RecipeFacade
 
     random_name = common_names.sample
   end
+
+  def self.get_lat
+    service = RestCountriesService.new
+    json_response = service.get_countries
+
+    # creates an array of arrays of lat and lng ... 
+    lat = json_response.map do |country|
+      country[:latlng]
+    end
+
+    random_name = common_names.sample
+  end
 end
