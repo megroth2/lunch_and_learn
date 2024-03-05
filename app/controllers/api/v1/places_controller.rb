@@ -21,7 +21,7 @@ class Api::V1::PlacesController < ApplicationController
       faraday.params['categories'] = "tourism"
       faraday.params['bias'] = "proximity:#{lat},#{lng}"
       faraday.params['limit'] = "10"
-      faraday.params['apiKey'] = "Rails.application.credentials.geoapify[:key]"
+      faraday.params['apiKey'] = Rails.application.credentials.geoapify[:key]
     end
 
     response = conn.get
@@ -29,7 +29,6 @@ class Api::V1::PlacesController < ApplicationController
     json = JSON.parse(response.body, symbolize_names: true) # 401 - wrong api key ?????????
 
     places = json[:features]
-    binding.pry
 
     #############################
 
