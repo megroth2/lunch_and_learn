@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get '/recipes', to: 'recipes#index'
-      get '/tourist_sites', to 'places#index'
+      get '/tourist_sites', to: 'places#index'
 
       # resources :users do
 	    #   resources :favorites, only: [:index, :create]
