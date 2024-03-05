@@ -1,14 +1,15 @@
 class PlaceFacade
 
   def self.get_places(country_poro)
-    # binding.pry
+    # service = EdemamService.new
+    # json_response = service.get_recipes(country)
 
-    conn = Faraday.new(url: "https://api.geoapify.com/v2/places") do |faraday|
-      faraday.params['categories'] = "tourism"
-      faraday.params['bias'] = "proximity:#{country_poro.lat},#{country_poro.lng}"
-      faraday.params['limit'] = "10"
-      faraday.params['apiKey'] = Rails.application.credentials.geoapify[:key]
-    end
+    # @recipes = json_response.map do |recipe|
+    #   RecipePoro.new(recipe, country)
+    # end
+
+    service = GeoapifyService.new
+    json_response = service.get_places(country_poro)
 
     response = conn.get
 
