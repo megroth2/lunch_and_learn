@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.geoapify.com/v2/places?apiKey=Rails.application.credentials.geoapify%5B:key%5D&bias=proximity:30,40&categories=tourism&limit=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Date:
+      - Tue, 05 Mar 2024 16:34:28 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '68'
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '1.0'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - accept, accept-language, content-language, access-control-max-age, access-control-allow-headers,
+        access-control-allow-methods, access-control-allow-origin, allow, api-version,
+        cf-ray, content-encoding, content-type, date, expect-ct, server, status, vary,
+        cache-control, etag, last-modified, expires, host, cf-timezone, cf-pseudo-ipv4,
+        accept-encoding, x-forwarded-for, x-forwarded-proto, cf-visitor, user-agent,
+        cf-connecting-ip, cdn-loop, cf-ipcity, cf-ipcontinent, cf-ipcountry, cf-iplatitude,
+        cf-iplongitude, cf-metro-code, cf-postal-code, cf-region, cf-region-code,
+        x-forwarded-port
+      Access-Control-Allow-Methods:
+      - GET, POST, DELETE, OPTIONS, PUT
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - private, max-age=0, no-cache
+      Cf-Cache-Status:
+      - DYNAMIC
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5tqmpCz5BjA8wV5AW8ZUdYpf5yMfraG0wfyZVN55c90Kki6Yr2p60tQFQpBSgXw5gpgBCmOlgFA%2FLB01vv9TZN7WlK4LkSVW25DVOHyG2mBXdfLs6m6BTMA7FHeaQ0GxRtvweEQV77atcqa2jvU%3D"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 85fb837d6b487c1c-DEN
+      Alt-Svc:
+      - h3=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"statusCode":401,"error":"Unauthorized","message":"Invalid apiKey"}'
+  recorded_at: Tue, 05 Mar 2024 16:34:28 GMT
+recorded_with: VCR 6.2.0
