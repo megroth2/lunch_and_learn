@@ -1,17 +1,17 @@
 class Api::V1::PlacesController < ApplicationController
 
   def index
+    country = CountryFacade.get_country(params[:country])
 
-    conn_1 = Faraday.new(url: "https://restcountries.com/v3.1/name/#{params[:country]}") do |faraday|
-      faraday.params['fields'] = "name,capital,latlng"
+    # conn_1 = Faraday.new(url: "https://restcountries.com/v3.1/name/#{params[:country]}") do |faraday|
+    #   faraday.params['fields'] = "name,capital,latlng"
+    # end
 
-    end
-
-    response_1 = conn_1.get
+    # response_1 = conn_1.get
     
-    json_1 = JSON.parse(response_1.body, symbolize_names: true) 
+    # json_1 = JSON.parse(response_1.body, symbolize_names: true) 
 
-    country = json_1.first
+    # country = json_1.first
 
     ##############################
     lat = country[:latlng].first
