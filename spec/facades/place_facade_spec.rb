@@ -3,7 +3,26 @@ require 'rails_helper'
 RSpec.describe "PlaceFacade" do 
   describe "#get_places" do
     it "can return places for a particular country", :vcr do
-      country = "thailand" 
+      data = {
+          "name": {
+              "common": "Italy",
+              "official": "Italian Republic",
+              "nativeName": {
+                  "ita": {
+                      "official": "Repubblica italiana",
+                      "common": "Italia"
+                  }
+              }
+          },
+          "capital": [
+              "Rome"
+          ],
+          "latlng": [
+              42.83333333,
+              12.83333333
+          ]
+      }
+      country = CountryPoro.new(data)
 
       places = PlaceFacade.get_places(country)
       place = places.first
