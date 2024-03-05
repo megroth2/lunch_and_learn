@@ -26,6 +26,11 @@ RSpec.describe "Api::V1::Places" do
 
         expect(place[:attributes]).to have_key(:place_id)
         expect(place[:attributes][:place_id]).to be_a(String)
+
+        expect(place[:attributes]).to_not have_key(:city)
+        expect(place[:attributes]).to_not have_key(:lon)
+        expect(place[:attributes]).to_not have_key(:categories)
+        expect(place[:attributes]).to_not have_key(:distance)
       end
     end
   end

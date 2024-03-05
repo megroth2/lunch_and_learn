@@ -19,13 +19,13 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Mar 2024 17:20:17 GMT
+      - Tue, 05 Mar 2024 17:23:08 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Content-Type:
       - text/html
       Expires:
-      - Tue, 05 Mar 2024 17:21:17 GMT
+      - Tue, 05 Mar 2024 17:24:08 GMT
       Cache-Control:
       - private, max-age=60
       Last-Modified:
@@ -98,5 +98,5 @@ http_interactions:
         <script src="js/restc.min.js" type="text/javascript" charset="utf-8" async defer></script>
         </body>
         </html>
-  recorded_at: Tue, 05 Mar 2024 17:20:17 GMT
+  recorded_at: Tue, 05 Mar 2024 17:23:08 GMT
 recorded_with: VCR 6.2.0
