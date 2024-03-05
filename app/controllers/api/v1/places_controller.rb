@@ -4,6 +4,7 @@ class Api::V1::PlacesController < ApplicationController
 
     conn_1 = Faraday.new(url: "https://restcountries.com/v3.1/name/#{params[:country]}") do |faraday|
       faraday.params['fields'] = "name,capital,latlng"
+
     end
 
     response_1 = conn_1.get
@@ -25,7 +26,7 @@ class Api::V1::PlacesController < ApplicationController
 
     response = conn.get
 
-    json = JSON.parse(response.body, symbolize_names: true)
+    json = JSON.parse(response.body, symbolize_names: true) # 401 - wrong api key ?????????
 
     places = json[:features]
     binding.pry

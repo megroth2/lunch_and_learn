@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 05 Mar 2024 17:09:36 GMT
+      - Tue, 05 Mar 2024 17:16:54 GMT
       Server:
       - Apache/2.4.38 (Debian)
       Cache-Control:
@@ -32,7 +32,7 @@ http_interactions:
       encoding: ASCII-8BIT
       string: !binary |-
         W3sibmFtZSI6eyJjb21tb24iOiJGcmFuY2UiLCJvZmZpY2lhbCI6IkZyZW5jaCBSZXB1YmxpYyIsIm5hdGl2ZU5hbWUiOnsiZnJhIjp7Im9mZmljaWFsIjoiUsOpcHVibGlxdWUgZnJhbsOnYWlzZSIsImNvbW1vbiI6IkZyYW5jZSJ9fX0sImNhcGl0YWwiOlsiUGFyaXMiXSwibGF0bG5nIjpbNDYuMCwyLjBdfV0=
-  recorded_at: Tue, 05 Mar 2024 17:09:36 GMT
+  recorded_at: Tue, 05 Mar 2024 17:16:54 GMT
 - request:
     method: get
     uri: https://api.geoapify.com/v2/places?apiKey=Rails.application.credentials.geoapify%5B:key%5D&bias=proximity:46.0,2.0&categories=tourism&limit=10
@@ -52,7 +52,7 @@ http_interactions:
       message: Unauthorized
     headers:
       Date:
-      - Tue, 05 Mar 2024 17:09:36 GMT
+      - Tue, 05 Mar 2024 17:16:55 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
@@ -83,17 +83,17 @@ http_interactions:
       Cf-Cache-Status:
       - DYNAMIC
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Zv8rovrRzDe5fC5dgbIMbJnJDLI0ZBk%2B24rjEzkhrKxMZZqJbo4wqcskg7ojgWIrYwBMTGkrdnQLs1d239PUPodl7b27RYzOx6x0jcr0h9ziRQsg0Sdzw0U5dFnnq7C3UF2femSC8HbpH17EiZg%3D"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=V4x3B2lweLV87ticnv7Y2gGnnLYBf8AR11IAs00OAnmJ1h2WTciMDdRGQIOfvwMjd8iLyo8bEPD38D2XWYHPcviKPE2rcRt16aYxEi7XRFLHr3OtMcs2D0ooEAM7REpf64zx7rrowFsFeiY2%2FDM%3D"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
       Cf-Ray:
-      - 85fbb6f8980b51f5-DEN
+      - 85fbc1abdcaf799f-DEN
       Alt-Svc:
       - h3=":443"; ma=86400
     body:
       encoding: UTF-8
       string: '{"statusCode":401,"error":"Unauthorized","message":"Invalid apiKey"}'
-  recorded_at: Tue, 05 Mar 2024 17:09:36 GMT
+  recorded_at: Tue, 05 Mar 2024 17:16:55 GMT
 recorded_with: VCR 6.2.0
