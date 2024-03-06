@@ -9,4 +9,10 @@ describe Favorite do
   describe "associations" do
     it {should belong_to(:user)}
   end
+
+  describe "#assign_user" do
+    it "assigns the user_id on a favorite based on a given api key" do
+      
+    end
+  end
 end
