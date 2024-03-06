@@ -44,7 +44,7 @@ RSpec.describe "Api::V1::Users" do
 
       expect(response).to have_http_status(422)
       expect(response_body).to have_key("errors")
-      expect(response_body["errors"]).to eq("Could not find user")
+      expect(response_body["errors"]).to eq(["User can't be blank", "User is not a number", "User must exist"])
     end
 
     it "will gracefully handle if the favorite cannot be created" do
