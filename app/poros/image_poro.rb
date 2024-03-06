@@ -1,15 +1,11 @@
 class ImagePoro
-  # attr_reader :id,
-  #             :title,
-  #             :url,
-  #             :image
-  #             :country
+  attr_reader :id,
+              :url,
+              :alt_tag
 
-  # def initialize(data, country)
-  #   @id = nil
-  #   @title = data[:recipe][:label]
-  #   @url = data[:recipe][:url]
-  #   @image = data[:recipe][:image]
-  #   @country = country
-  # end
+  def initialize(data, country)
+    @id = nil
+    @url = data[:urls][:raw]
+    @alt_tag = data[:alt_description]
+  end
 end
