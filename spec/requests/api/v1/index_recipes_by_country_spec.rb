@@ -37,6 +37,7 @@ RSpec.describe "Api::V1::Recipes" do
       end
     end
 
+    # vcr cassette has to be deleted every time in order to pass
     xit "sends a list of recipes for a random country if none is provided", :vcr do
       get "/api/v1/recipes?country="
 

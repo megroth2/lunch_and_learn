@@ -12,17 +12,16 @@ RSpec.describe UnsplashService do
   end
 
   describe "#get_images" do
-    xit "returns images", :vcr do
+    it "returns images", :vcr do
       images = @service.get_images("india")
       image = images.first
       
       expect(images).to be_an(Array)
-      binding.pry
-      expect(image).to have_key([:urls])
-      expect(image[:urls]).to have_key([:raw])
+      expect(image).to have_key(:urls)
+      expect(image[:urls]).to have_key(:raw)
       expect(image[:urls][:raw]).to be_a(String)
 
-      expect(image).to have_key([:alt_description])
+      expect(image).to have_key(:alt_description)
       expect(image[:alt_description]).to be_a(String)
     end
   end
