@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  before_action :parse_request_body, only: [:create, :log_in]
+  before_action :parse_request_body
 
   def create
     unless passwords_match?
@@ -20,10 +20,8 @@ class Api::V1::UsersController < ApplicationController
     user = find_user_by_email
 
     if user && user.authenticate(@request_body["password"])
-      # Authentication successful
       render json: UserSerializer.format_user(user), status: :ok
     else
-      # Authentication failed
       render json: { errors: "Invalid Credentials" }, status: :unauthorized
     end
   end
