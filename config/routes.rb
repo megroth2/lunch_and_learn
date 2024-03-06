@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       get '/recipes', to: 'recipes#index'
       get '/learning_resources', to: 'learning_resources#index'
-      post '/users', to: 'users#index'
+      resources :users, only: [:create]
+      
       # resources :users do
 	    #   resources :favorites, only: [:index, :create]
       # end
