@@ -28,7 +28,7 @@ This application exposes the following endpoints.
 
 Click here to view the [JSON contract](/JSON_Contract.md), which includes request and response samples for each of the endpoints.
 
-Ensure you have the server running and navigate to https://localhost:3000.
+Ensure you have the server running and navigate to the root: `https://localhost:3000`
 
 #### Index Recipes for a Particular Country
     GET `/api/v1/recipes?country=<COUNTRY>`
@@ -52,26 +52,41 @@ _____
 
 ## APIs Consumed:
 
-### Recipe Search API by edemam
+### Recipe Search API by Edemam
 - The [Recipe Search](https://developer.edamam.com/edamam-docs-recipe-api) api is used to search millions of online recipes and return a list matching a given Country name. We then expose the name, link, and image of each recipe that is returned via our api.
-- To use this api you must request an api key. Sign up for a [free account](https://developer.edamam.com/edamam-recipe-api) and then [login](developer.edamam.com) to your account. Go to Accounts > Dashboard > Applications > and click "View" next to Recipe Search API. Take note of your application id and your application key - you will need these in order to make requests to this api.
-- NOTE: The free plan of this api is limited to _10 calls per minute_, however all tests have been stubbed with webmock and vcr, so this limit will not apply to tests run in the rails test environment.
-- The base url for this api is: `https://api.edamam.com`
+- The base url for this api is: [https://api.edamam.com](https://api.edamam.com)
+- You can request a an app id and app key here: [create a free edemam account](https://developer.edamam.com/edamam-recipe-api) and then [login](developer.edamam.com) to your account.
+    - NOTE: The free plan of this api is limited to _10 calls per minute_, however all tests have been stubbed with webmock and vcr, so this limit will not apply to tests run in the rails test environment.
 
-#### Search for Recipes by Country Name
-    GET `/api/recipes/v2?type=any&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>`
+    #### Search for Recipes by Country Name
+        GET `/api/recipes/v2?type=any&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>`
 
+    _Optional:_ limit which fields are included in the response using this request:
 
- _Optional:_ limit which fields are included in the response using this request:
-
-    GET `/api/recipes/v2?type=public&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>&field=label&field=image&field=url`
+        GET `/api/recipes/v2?type=public&q=<COUNTRY_NAME>&app_id=<APPLICATION_ID>&app_key=<APPLICATION_KEY>&field=label&field=image&field=url`
 
 ### The REST Countries API
-- The [REST Countries](https://restcountries.com/#api-endpoints-v3-all) api is used to randomly select a country when none is provided. There is no api key required.
-- The base url for this api is: `https://restcountries.com`
+- The [REST Countries](https://restcountries.com/#api-endpoints-v3-all) api is used to randomly select a country when none is provided.
+- The base url for this api is: [https://restcountries.com](https://restcountries.com)
+- There is no api key required.
 
-#### Get All Country Names
-    GET `/v3.1/all?fields=name`
+    #### Get All Country Names
+        GET /v3.1/all?fields=name
+
+### Search List API by YouTube
+- The [Search List](https://developers-dot-devsite-v2-prod.appspot.com/youtube/v3/docs/search/list) api is used to select a video from [Mr History]'s YouTube Channel using the provided country as a query parameter.
+- The base url for this api is: `https://www.googleapis.com/youtube/v3/search`
+- You can request an API key [here](https://developers-dot-devsite-v2-prod.appspot.com/youtube/v3/docs#calling-the-api).
+
+    #### Search and Return One Video
+        GET ?key=<APPLICATION_KEY>&q=<COUNTRY_NAME>&part=snippet&maxResults=1&type=video
+
+    _Optional:_ limit which fields are included in the response using this request:
+        
+        GET ?key=<APPLICATION_KEY>&q=<COUNTRY_NAME>&part=snippet&maxResults=1&type=video&channelId=<YOUTUBE_CHANNEL_ID>
+
+### Unsplash API
+
 
 _____
 
