@@ -2,17 +2,17 @@ class Api::V1::UsersController < ApplicationController
   before_action :parse_request_body, only: [:create, :log_in]
 
   def create
-    if passwords_match?
-      user = User.new(@request_body)
-
-      if user.save
-        render json: UserSerializer.format_user(user), status: :created
-      else
-        render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
-      end
-
-    else
+    unless passwords_match?
       render json: { errors: "Password and password confirmation do not match" }, status: :unprocessable_entity
+      return
+    end
+
+    user = User.new(@request_body)
+
+    if user.save
+      render json: UserSerializer.format_user(user), status: :created
+    else
+      render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
     end
   end
 
