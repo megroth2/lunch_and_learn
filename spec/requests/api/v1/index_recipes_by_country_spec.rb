@@ -36,7 +36,9 @@ RSpec.describe "Api::V1::Recipes" do
         expect(recipe[:attributes]).to_not have_key(:ingredients)
       end
     end
+  end
 
+  describe "[sad paths]" do
     # vcr cassette has to be deleted every time in order to pass
     xit "sends a list of recipes for a random country if none is provided", :vcr do
       get "/api/v1/recipes?country="
@@ -72,21 +74,6 @@ RSpec.describe "Api::V1::Recipes" do
         expect(recipe[:attributes]).to_not have_key(:source)
         expect(recipe[:attributes]).to_not have_key(:ingredients)
       end
-    end
-  end
-
-  describe "[sad paths]" do
-    it "will gracefully handle if ..." do
-      # get ""
-
-      # expect(response).to_not be_successful
-      # expect(response.status).to eq(404)
-
-      # data = JSON.parse(response.body, symbolize_names: true)
-      
-      # expect(data[:errors]).to be_a(Array)
-      # expect(data[:errors].first[:status]).to eq("404")
-      # expect(data[:errors].first[:title]).to eq("")
     end
   end
 end
