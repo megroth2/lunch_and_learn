@@ -1,18 +1,20 @@
 require "rails_helper"
 
 RSpec.describe "Api::V1::Users" do
+  before(:each) do
+    user = User.create!(name: 'user', email: 'user@test.com', password: "password")
+  end
+
   describe "[happy paths]" do
     it "returns a response in the correct format" do
       request_body = {
-        "name": "test",
-        "email": "test@test.com",
-        "password": "test123",
-        "password_confirmation": "test123"
+        "email": "user@test.com",
+        "password": "password"
       }
 
-      post "/api/v1/users", params: request_body.to_json, headers: { "Content-Type": "application/json" }
+      post "/api/v1/sessions", params: request_body.to_json, headers: { "Content-Type": "application/json" }
 
-      expect(response).to have_http_status(201)
+      expect(response).to have_http_status(200)
 
       user = JSON.parse(response.body, symbolize_names: true)[:data]
 
@@ -39,22 +41,20 @@ RSpec.describe "Api::V1::Users" do
   end
 
   describe "[sad paths]" do
-    it "will gracefully handle if password and password confirmation don't match" do
-      user_params = {
-        "name": "test",
-        "email": "test@test.com",
-        "password": "test123",
-        "password_confirmation": "not a matching password"
+    it "will gracefully handle if the password is wrong" do
+      request_body = {
+        "email": "user@test.com",
+        "password": "wrong password"
       }
 
-      post "/api/v1/users", params: user_params.to_json, headers: { "Content-Type": "application/json" }
+      post "/api/v1/sessions", params: request_body.to_json, headers: { "Content-Type": "application/json" }
 
-      expect(response).to have_http_status(422)
+      expect(response).to have_http_status(401)
 
       user = JSON.parse(response.body, symbolize_names: true)
 
       expect(user).to have_key(:errors)
-      expect(user[:errors]).to eq("Password and password confirmation do not match")
+      expect(user[:errors]).to eq("Invalid Credentials")
     end
   end
 end
