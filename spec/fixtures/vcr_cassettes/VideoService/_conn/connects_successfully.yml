@@ -25,7 +25,7 @@ http_interactions:
       - Referer
       - X-Origin
       Date:
-      - Wed, 06 Mar 2024 05:58:43 GMT
+      - Wed, 06 Mar 2024 18:10:04 GMT
       Server:
       - scaffolding on HTTPServer2
       Cache-Control:
@@ -45,7 +45,7 @@ http_interactions:
       string: |
         {
           "kind": "youtube#searchListResponse",
-          "etag": "EwQRqh5RTAn0RoqVbUp-k8IQZpY",
+          "etag": "DpcpA8qwSTm2rAuVyiX0IzN5jl8",
           "nextPageToken": "CAUQAA",
           "regionCode": "US",
           "pageInfo": {
@@ -55,45 +55,45 @@ http_interactions:
           "items": [
             {
               "kind": "youtube#searchResult",
-              "etag": "frPg0d1OG7qfXNMHQwps4D0QqmM",
+              "etag": "-V9g7YbFF9xRO9IkRrSUQS0skdg",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "oAGow4FpWQw"
+                "videoId": "D-C2J3eb5_0"
               }
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "nprUYRG1NFOMWhJTs_dqGZU_xBg",
+              "etag": "IRlUBNpspGHsoRW4C_xuP1IY6TQ",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "hh5rbWHIg8g"
+                "videoId": "1GyYd_Uq0yc"
               }
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "KdMz9wKUPxgsvhTeA8sZ5JLkLYg",
+              "etag": "kY2MOUpFiHlkjySuHOSLEPD0ZcQ",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "nHCVfceNuxQ"
+                "videoId": "u_BSaW4Gw5w"
               }
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "JDiCy4n8MoQRLLZIiiyP_N-gTBs",
+              "etag": "L1E9M-UfNcSDTDMEcAaB29vFx2A",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "yncUZ_zhxdQ"
+                "videoId": "bPlj9mrV5Os"
               }
             },
             {
               "kind": "youtube#searchResult",
-              "etag": "kn18lmWp-zKHp6kM7SfDMRZOkn8",
+              "etag": "c0RBdVYpcRuKXtx97rx0IxPUfWw",
               "id": {
                 "kind": "youtube#video",
-                "videoId": "ClMyyOmrqfg"
+                "videoId": "mPYTYub7NUs"
               }
             }
           ]
         }
-  recorded_at: Wed, 06 Mar 2024 05:58:43 GMT
+  recorded_at: Wed, 06 Mar 2024 18:10:04 GMT
 recorded_with: VCR 6.2.0

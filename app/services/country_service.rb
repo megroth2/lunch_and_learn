@@ -1,4 +1,4 @@
-class RestCountriesService
+class CountryService
   def conn
     Faraday.new(url: 'https://restcountries.com/v3.1/all') do |faraday|
       faraday.params['fields'] = "name"

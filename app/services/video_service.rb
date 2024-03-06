@@ -1,4 +1,4 @@
-class YoutubeService
+class VideoService
   def conn
     Faraday.new(url: "https://www.googleapis.com/youtube/v3/search") do |faraday|
       faraday.params['key'] = Rails.application.credentials.youtube[:key]

@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe UnsplashService do
+RSpec.describe ImageService do
   before(:each) do
-    @service = UnsplashService.new
+    @service = ImageService.new
   end
 
   describe "#conn" do

@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe EdemamService do
+RSpec.describe RecipeService do
   before(:each) do
-    @service = EdemamService.new
+    @service = RecipeService.new
   end
 
   describe "#conn" do
