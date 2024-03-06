@@ -1,7 +1,6 @@
 class RecipeService
   def conn
     Faraday.new(url: 'https://api.edamam.com/api/recipes/v2') do |faraday|
-      # faraday.headers['Accept'] = 'application/json'
       faraday.params['type'] = "public"
       faraday.params['app_id'] = Rails.application.credentials.edemam[:id]
       faraday.params['app_key'] = Rails.application.credentials.edemam[:key]
