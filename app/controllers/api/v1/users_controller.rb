@@ -16,4 +16,18 @@ class Api::V1::UsersController < ApplicationController
       render json: { errors: "Password and password confirmation do not match" }, status: :unprocessable_entity
     end
   end
+
+  def log_in
+    request_body = JSON.parse(request.body.read)
+
+    user = User.find_by(email: request_body["email"])
+
+    if user && user.authenticate(request_body["password"])
+      # Authentication successful
+      render json: UserSerializer.format_user(user), status: :ok
+    else
+      # Authentication failed
+      render json: { errors: "Invalid Credentials" }, status: :unauthorized
+    end
+  end
 end
