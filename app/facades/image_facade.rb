@@ -11,7 +11,7 @@ class ImageFacade
     json = JSON.parse(response.body, symbolize_names: true)[:results]
     
     @images = json.first(10).map do |image|
-      ImagePoro.new(image, country) # is this the right place to filter for 10?
+      ImagePoro.new(image, country)
     end
   end
 end
