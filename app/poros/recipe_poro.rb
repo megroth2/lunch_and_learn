@@ -2,12 +2,14 @@ class RecipePoro
   attr_reader :id,
               :title,
               :url,
-              :country,
               :image
+              :country
 
   def initialize(data, country)
+    @id = nil
     @title = data[:recipe][:label]
-    @image = data[:recipe][:image]
     @url = data[:recipe][:url]
+    @image = data[:recipe][:image]
+    @country = country
   end
 end

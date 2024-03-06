@@ -16,6 +16,7 @@ RSpec.describe RecipePoro do
       expect(recipe.id).to eq(nil) # since its a poro, there's no id
       expect(recipe.title).to eq("Andy Ricker's Naam Cheuam Naam Taan Piip (Palm Sugar Simple Syrup)")
       expect(recipe.url).to eq("https://www.seriouseats.com...")
+      binding.pry
       # expect(recipe.country).to eq("thailand")
       expect(recipe.image).to eq("https://edamam-product-images...")
     end
