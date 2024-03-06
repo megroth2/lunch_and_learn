@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe YoutubeService do
+RSpec.describe VideoService do
   before(:each) do
-    @service = YoutubeService.new
+    @service = VideoService.new
   end
 
   describe "#conn" do

@@ -1,8 +1,8 @@
 require "rails_helper"
 
-RSpec.describe RestCountriesService do
+RSpec.describe CountryService do
   before(:each) do
-    @service = RestCountriesService.new
+    @service = CountryService.new
   end
 
   describe "#conn" do

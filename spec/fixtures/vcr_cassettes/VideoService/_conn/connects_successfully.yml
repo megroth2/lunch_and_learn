@@ -1,0 +1,99 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.googleapis.com/youtube/v3/search?key=AIzaSyCiEa2zOYvS5-xexZD3kVXPvG2otSsKVyA
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=UTF-8
+      Vary:
+      - Origin
+      - Referer
+      - X-Origin
+      Date:
+      - Wed, 06 Mar 2024 17:10:58 GMT
+      Server:
+      - scaffolding on HTTPServer2
+      Cache-Control:
+      - private
+      X-Xss-Protection:
+      - '0'
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Content-Type-Options:
+      - nosniff
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        {
+          "kind": "youtube#searchListResponse",
+          "etag": "sqDxPNr1p48eUtyFIiq71qVKRaA",
+          "nextPageToken": "CAUQAA",
+          "regionCode": "US",
+          "pageInfo": {
+            "totalResults": 1000000,
+            "resultsPerPage": 5
+          },
+          "items": [
+            {
+              "kind": "youtube#searchResult",
+              "etag": "9F9AC-JchXSTl2K2jaeGNyggcuM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "DqU8-CeaUVg"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "Tgyvl6KXd1RnfKu81LBIZZUASyM",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "TzH_2EpGOU8"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "ZemX65gDv_umhvYyfjibeYYr-7I",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "vcgW5wSlmEo"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "GwEqP2QAyF7ml9tNnCe3xbvbePc",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "0V0SKiiFZMs"
+              }
+            },
+            {
+              "kind": "youtube#searchResult",
+              "etag": "qGCj4MQYtLRbNJtWC_MsDzqFM9c",
+              "id": {
+                "kind": "youtube#video",
+                "videoId": "cKvqSLiOT3A"
+              }
+            }
+          ]
+        }
+  recorded_at: Wed, 06 Mar 2024 17:10:58 GMT
+recorded_with: VCR 6.2.0

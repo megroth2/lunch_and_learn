@@ -1,4 +1,4 @@
-class UnsplashService
+class ImageService
   def conn(country)
     Faraday.new(url: "https://api.unsplash.com/search/photos") do |faraday|
       faraday.params['client_id'] = Rails.application.credentials.unsplash[:access_key]

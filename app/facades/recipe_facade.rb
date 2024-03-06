@@ -1,7 +1,7 @@
 class RecipeFacade
 
   def self.get_recipes(country)
-    service = EdemamService.new
+    service = RecipeService.new
     json_response = service.get_recipes(country)
 
     @recipes = json_response.map do |recipe|
@@ -10,7 +10,7 @@ class RecipeFacade
   end
 
   def self.get_random_country
-    service = RestCountriesService.new
+    service = CountryService.new
     json_response = service.get_countries
 
     common_names = json_response.map do |country|

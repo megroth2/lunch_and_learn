@@ -1,4 +1,4 @@
-class EdemamService
+class RecipeService
   def conn
     Faraday.new(url: 'https://api.edamam.com/api/recipes/v2') do |faraday|
       # faraday.headers['Accept'] = 'application/json'
