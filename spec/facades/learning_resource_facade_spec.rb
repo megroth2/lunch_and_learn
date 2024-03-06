@@ -6,7 +6,6 @@ RSpec.describe "LearningResourceFacade" do
       country = "india" 
 
       learning_resource = LearningResourceFacade.get_video(country)
-      # binding.pry
 
       expect(learning_resource).to be_a(LearningResourcePoro)
       expect(learning_resource.title).to be_a(String)
