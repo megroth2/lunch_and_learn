@@ -1,10 +1,9 @@
 class Api::V1::UsersController < ApplicationController
+  before_action :parse_request_body, only: [:create, :log_in]
 
   def create
-    request_body = JSON.parse(request.body.read)
-
-    if request_body["password"] == request_body["password_confirmation"]
-      user = User.new(request_body)
+    if passwords_match?
+      user = User.new(@request_body)
 
       if user.save
         render json: UserSerializer.format_user(user), status: :created
@@ -18,16 +17,28 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def log_in
-    request_body = JSON.parse(request.body.read)
+    user = find_user_by_email
 
-    user = User.find_by(email: request_body["email"])
-
-    if user && user.authenticate(request_body["password"])
+    if user && user.authenticate(@request_body["password"])
       # Authentication successful
       render json: UserSerializer.format_user(user), status: :ok
     else
       # Authentication failed
       render json: { errors: "Invalid Credentials" }, status: :unauthorized
     end
+  end
+
+  private
+
+  def parse_request_body
+    @request_body = JSON.parse(request.body.read)
+  end
+
+  def passwords_match?
+    @request_body["password"] == @request_body["password_confirmation"]
+  end
+
+  def find_user_by_email
+    User.find_by(email: @request_body["email"])
   end
 end
