@@ -19,4 +19,12 @@ describe User do
     expect(user).to_not have_attribute(:password)
     expect(user.password_digest).to_not eq('password')
   end
+
+  describe "#generate_api_key" do
+    it "generates a random api key" do
+      user = User.create!(email: 'user@test.com', password: "password")
+
+      expect(user.api_key).to_not be(nil)
+    end
+  end
 end

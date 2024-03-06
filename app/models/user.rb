@@ -9,8 +9,12 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  before_create :generate_api_key
+
+  private
+
   def generate_api_key
-    api_key = SecureRandom.urlsafe_base64(10)
-    binding.pry
+    self.api_key = SecureRandom.urlsafe_base64(10)
+    # add some error handling for if the randomly generated api_key is not unique. Ideally, re-generate until the user is sucessfully created.
   end
 end
