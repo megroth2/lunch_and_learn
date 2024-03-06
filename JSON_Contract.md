@@ -12,7 +12,7 @@ This file contains sample requests and responses for each of the following endpo
 
 **Request**
 ```http
-GET /api/v1/recipes?country=thailand
+GET     /api/v1/recipes?country=thailand
 Content-Type: application/json
 Accept: application/json
 ```
@@ -53,7 +53,7 @@ Accept: application/json
 
 **Request**
 ```http
-GET /api/v1/learning_resources?country=laos
+GET     /api/v1/learning_resources?country=laos
 Content-Type: application/json
 Accept: application/json
 ```
@@ -97,7 +97,7 @@ Accept: application/json
 
 **Request**
 ```http
-POST /api/v1/users
+POST    /api/v1/users
 Content-Type: application/json
 Accept: application/json
 ```
@@ -131,7 +131,7 @@ Accept: application/json
 
 **Request**
 ```http
-POST /api/v1/sessions
+POST    /api/v1/sessions
 Content-Type: application/json
 Accept: application/json
 ```
@@ -165,7 +165,7 @@ Accept: application/json
 
 **Request**
 ```http
-POST /api/v1/favorites
+POST    /api/v1/favorites
 Content-Type: application/json
 Accept: application/json
 ```
@@ -191,7 +191,7 @@ Accept: application/json
 
 **Request**
 ```http
-GET /api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4
+GET     /api/v1/favorites?api_key=jgn983hy48thw9begh98h4539h4
 Content-Type: application/json
 Accept: application/json
 ```
