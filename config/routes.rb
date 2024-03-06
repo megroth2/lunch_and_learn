@@ -14,14 +14,7 @@ Rails.application.routes.draw do
       get '/learning_resources', to: 'learning_resources#index'
       post '/sessions', to: 'users#log_in'
       resources :users, only: [:create]
-      
-      # resources :users do
-	    #   resources :favorites, only: [:index, :create]
-      # end
-
-      # resources :recipes do
- 	    #   resources :favorites, only: [:index]
-      # end
+      resources :favorites, only: [:create]
     end
   end
 end
