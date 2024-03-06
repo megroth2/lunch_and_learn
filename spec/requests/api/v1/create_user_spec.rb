@@ -56,5 +56,23 @@ RSpec.describe "Api::V1::Users" do
       expect(user).to have_key(:errors)
       expect(user[:errors]).to eq("Password and password confirmation do not match")
     end
+
+    it "will gracefully handle if the user cannot be created" do
+      user_params = {
+        "name": "test",
+        "email": nil,
+        "password": "test123",
+        "password_confirmation": "test123"
+      }
+
+      post "/api/v1/users", params: user_params.to_json, headers: { "Content-Type": "application/json" }
+
+      expect(response).to have_http_status(422)
+
+      user = JSON.parse(response.body, symbolize_names: true)
+
+      expect(user).to have_key(:errors)
+      expect(user[:errors].first).to eq("Email can't be blank")
+    end
   end
 end
