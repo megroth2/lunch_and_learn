@@ -22,7 +22,7 @@ RSpec.describe "Api::V1::Users" do
       expect(user[:type]).to eq("user")
 
       expect(user).to have_key(:id)
-      expect(user[:id]).to eq("1")
+      expect(user[:id]).to eq(User.last.id)
 
       expect(user).to have_key(:attributes)
       expect(user[:attributes]).to have_key(:name)
