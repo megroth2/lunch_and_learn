@@ -11,8 +11,26 @@ describe Favorite do
   end
 
   describe "#assign_user" do
-    it "assigns the user_id on a favorite based on a given api key" do
-      
+    describe "[happy path]" do
+      it "assigns a user to a favorite based on a given api key" do
+        user = User.create!(
+          name: "user",
+          email: "user@test.com",
+          password: "password",
+          password_confirmation: "password"
+        )
+        favorite = Favorite.new(api_key: user.api_key)
+
+        expect { favorite.assign_user }.to change { favorite.user_id }.from(nil).to(user.id)
+      end
+    end
+
+    describe "[sad path]" do
+      it "returns error if no user is found" do
+        favorite = Favorite.new().assign_user
+
+        expect(favorite.errors[:base]).to include('User with provided API key not found')
+      end   
     end
   end
 end
