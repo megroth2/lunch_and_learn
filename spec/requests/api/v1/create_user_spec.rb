@@ -40,16 +40,21 @@ RSpec.describe "Api::V1::Users" do
 
   describe "[sad paths]" do
     it "will gracefully handle if password and password confirmation don't match" do
-      # get ""
+      user_params = {
+        "name": "test",
+        "email": "test@test.com",
+        "password": "test123",
+        "password_confirmation": "not a matching password"
+      }
 
-      # expect(response).to_not be_successful
-      # expect(response.status).to eq(404)
+      post "/api/v1/users", params: user_params.to_json, headers: { "Content-Type": "application/json" }
 
-      # data = JSON.parse(response.body, symbolize_names: true)
-      
-      # expect(data[:errors]).to be_a(Array)
-      # expect(data[:errors].first[:status]).to eq("404")
-      # expect(data[:errors].first[:title]).to eq("")
+      expect(response).to have_http_status(422)
+
+      user = JSON.parse(response.body, symbolize_names: true)
+
+      expect(user).to have_key(:errors)
+      expect(user[:errors]).to eq("Password and password confirmation do not match")
     end
   end
 end

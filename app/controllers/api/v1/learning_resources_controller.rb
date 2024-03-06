@@ -6,7 +6,3 @@ class Api::V1::LearningResourcesController < ApplicationController
     render json: LearningResourceSerializer.format_learning_resources(learning_resource_poro, image_poros, params[:country])
   end
 end
-
-# YoutubeService.new.get_video(country)
-# UnsplashService.new.get_images(country)
-# video = LearningResourcePoro.new(json[:items].first, country)
