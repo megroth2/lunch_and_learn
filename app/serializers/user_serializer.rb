@@ -3,15 +3,15 @@ class UserSerializer
 
   attributes :id, :name, :email, :api_key
 
-  def self.format_users(user_poro)
+  def self.format_user(user)
     {
       data: {
         type: "user",
         id: "1",
         attributes: {
-          name: user_poro.name,
-          email: user_poro.email,
-          api_key: user_poro.api_key
+          name: user.name,
+          email: user.email,
+          api_key: user.api_key
         }
       }
     }
