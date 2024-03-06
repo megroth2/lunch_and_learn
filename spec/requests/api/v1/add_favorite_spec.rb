@@ -5,7 +5,6 @@ RSpec.describe "Api::V1::Users" do
     @user = User.create!(
       name: "user",
       email: "user@test.com",
-      # api_key: "Rx8F6PZzwA8",
       password: "password",
       password_confirmation: "password"
     )
@@ -18,7 +17,7 @@ RSpec.describe "Api::V1::Users" do
         "country": "thailand",
         "recipe_link": "https://www.tastingtable.com/.....",
         "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
-    }
+      }
 
       post "/api/v1/favorites", params: request_body.to_json, headers: { "Content-Type": "application/json" }
 
@@ -31,8 +30,21 @@ RSpec.describe "Api::V1::Users" do
   end
 
   describe "[sad paths]" do
-    it "" do
+    it "will gracefully handle if the favorite cannot be created" do
+      request_body = {
+        "api_key": nil,
+        "country": "thailand",
+        "recipe_link": "https://www.tastingtable.com/.....",
+        "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
+      }
 
+      post "/api/v1/favorites", params: request_body.to_json, headers: { "Content-Type": "application/json" }
+
+      response_body = JSON.parse(response.body)
+
+      expect(response).to have_http_status(422)
+      expect(response_body).to have_key("errors")
+      expect(response_body["errors"]).to eq("Could not find user")
     end
   end
 end
