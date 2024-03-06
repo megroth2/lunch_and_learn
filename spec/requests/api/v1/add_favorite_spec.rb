@@ -30,7 +30,7 @@ RSpec.describe "Api::V1::Users" do
   end
 
   describe "[sad paths]" do
-    it "will gracefully handle if the favorite cannot be created" do
+    it "will gracefully handle if a user cannot be found" do
       request_body = {
         "api_key": nil,
         "country": "thailand",
@@ -45,6 +45,25 @@ RSpec.describe "Api::V1::Users" do
       expect(response).to have_http_status(422)
       expect(response_body).to have_key("errors")
       expect(response_body["errors"]).to eq("Could not find user")
+    end
+
+    it "will gracefully handle if the favorite cannot be created" do
+      request_body = {
+        "api_key": "#{@user.api_key}",
+        "country": "thailand",
+        "recipe_link": "https://www.tastingtable.com/.....",
+        "recipe_title": "Crab Fried Rice (Khaao Pad Bpu)"
+      }
+
+      allow_any_instance_of(Favorite).to receive(:save).and_return(false)
+
+      post "/api/v1/favorites", params: request_body.to_json, headers: { "Content-Type": "application/json" }
+
+      response_body = JSON.parse(response.body)
+
+      expect(response).to have_http_status(422)
+      expect(response_body).to have_key("errors")
+      expect(response_body["errors"]).to eq([])
     end
   end
 end

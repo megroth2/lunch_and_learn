@@ -11,7 +11,7 @@ class Api::V1::FavoritesController < ApplicationController
       if favorite.save
         render json: { "success": "Favorite added successfully"}, status: :created
       else
-        render json: { errors: favorite.errors.full_messages }
+        render json: { errors: favorite.errors.full_messages }, status: :unprocessable_entity
       end
 
     else
