@@ -14,7 +14,9 @@ class User < ApplicationRecord
   private
 
   def generate_api_key
-    self.api_key = SecureRandom.urlsafe_base64(10)
-    # add some error handling for if the randomly generated api_key is not unique. Ideally, re-generate until the user is sucessfully created.
+    loop do
+      proposed_key = SecureRandom.urlsafe_base64(10)
+      break self.api_key = proposed_key unless self.class.exists?(api_key: proposed_key)
+    end
   end
 end
