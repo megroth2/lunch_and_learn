@@ -8,8 +8,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-# Users
 user_1 = User.create!(
+  id: 1,
   name: "User 1",
   email: "user_1@test.com",
   api_key: "Rx8F6PZzwA8",
@@ -18,6 +18,7 @@ user_1 = User.create!(
 )
 
 user_2 = User.create!(
+  id: 2,
   name: "User 2",
   email: "user_2@test.com",
   api_key: "Xwq1G7b_yXc",
@@ -25,10 +26,23 @@ user_2 = User.create!(
   password_confirmation: "password"
 )
 
-# Favorites
-# user 1 favorites recipe_1 and recipe_2
-# favorite_1 = Favorite.create!(user_id: 1, recipe_id: 1)
-# favorite_2 = Favorite.create!( user_id: 1, recipe_id: 2)
+favorite_1 = Favorite.create!(
+  user_id: 1,
+  recipe_title: "Cucumber Salad With Yogurt (Middle East, Palestine)",
+  recipe_link: "https://api.edamam.com/api/recipes/v2/2e67ecf1fc1a1f234739a5cf899af4da?type=public&app_id=#{Rails.application.credentials.edemam[:id]}&app_key=#{Rails.application.credentials.edemam[:key]}",
+  country: "Palestine"
+)
 
-# # user_2 favorites recipe_2
-# favorite_3 = Favorite.create!(user_id: 2, recipe_id: 2)
+favorite_2 = Favorite.create!(
+  user_id: 2,
+  recipe_title: "Patacones de Colombia (Fried Plantains)",
+  recipe_link: "https://api.edamam.com/api/recipes/v2/7b55cb54dc000c7bbc709579f5b3e658?type=public&app_id=#{Rails.application.credentials.edemam[:id]}&app_key=#{Rails.application.credentials.edemam[:key]}",
+  country: "Colombia"
+)
+
+favorite_3 = Favorite.create!(
+  user_id: 1,
+  recipe_title: "Garam Masala",
+  recipe_link: "https://api.edamam.com/api/recipes/v2/4c7dd1043b6cf58b098ae4838042a93d?type=public&app_id=#{Rails.application.credentials.edemam[:id]}&app_key=#{Rails.application.credentials.edemam[:key]}",
+  country: "India"
+)
