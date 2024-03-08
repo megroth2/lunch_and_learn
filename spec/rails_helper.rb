@@ -97,5 +97,4 @@ end
       (uri.host == 'restcountries.com' && uri.path == '/v3.1/all' && uri.query == 'fields=name') ||
         (uri.host == 'api.edamam.com' && uri.path == '/api/recipes/v2')
     end
-
   end

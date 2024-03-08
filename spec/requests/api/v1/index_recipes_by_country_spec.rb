@@ -47,10 +47,10 @@ RSpec.describe "Api::V1::Recipes" do
       recipes = File.read("spec/fixtures/recipes.json")
 
       stub_request(:get, "https://restcountries.com/v3.1/all?fields=name").
-        to_return(status: 200, body: countries, headers: {})
+        to_return(status: 200, body: countries)
 
       stub_request(:get, "http://localhost:3000/api/v1/recipes?country=").
-        to_return(status: 200, body: recipes, headers: {})
+        to_return(status: 200, body: recipes)
 
       get "https://restcountries.com/v3.1/all?fields=name"
       get "/api/v1/recipes?country="
