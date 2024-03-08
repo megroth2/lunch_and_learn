@@ -1,0 +1,66 @@
+[
+    {
+        "name": {
+            "common": "Tanzania",
+            "official": "United Republic of Tanzania",
+            "nativeName": {
+                "eng": {
+                    "official": "United Republic of Tanzania",
+                    "common": "Tanzania"
+              },
+                "swa": {
+                    "official": "Jamhuri ya Muungano wa Tanzania",
+                    "common": "Tanzania"
+                }
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Italy",
+            "official": "Italian Republic",
+            "nativeName": {
+                "ita": {
+                    "official": "Repubblica italiana",
+                    "common": "Italia"
+                }
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Liberia",
+            "official": "Republic of Liberia",
+            "nativeName": {
+                "eng": {
+                    "official": "Republic of Liberia",
+                    "common": "Liberia"
+                }
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Palestine",
+            "official": "State of Palestine",
+            "nativeName": {
+                "ara": {
+                    "official": "دولة فلسطين",
+                    "common": "فلسطين"
+                }
+            }
+        }
+    },
+    {
+        "name": {
+            "common": "Colombia",
+            "official": "Republic of Colombia",
+            "nativeName": {
+                "spa": {
+                    "official": "República de Colombia",
+                    "common": "Colombia"
+                }
+            }
+        }
+    }
+]

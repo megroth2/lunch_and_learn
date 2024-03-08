@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "recipe": {
+          "label": "Cart Path Only - Bai Flavor Life",
+          "image": "https://edamam-product-images.s3.amazonaws.com/web-img/dad/dad7c8d938f7bfe0dfd0e197735819fe.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIC5E%2Bg68DW6NO0E8xDSfVzd3x2OrGrrOLvt49%2BKywQP6AiBDdMyswmIKYAmrSqzRjsSEHfiYcwrcmZ60qLGHiRaPyyrCBQja%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIMOoP1Wr5%2FzAUS9cCmKpYFW4ri5F0rB4bbo%2Bb5hADVW%2BdnKWXrqzdplFvbivyu1suJvv4r5e2SUG7vtpwETkBsuzoCsBBPjB4N4fRe33wxysO5jt1rOnrDS6fG1PL%2BwEHn%2FplbBVv3inT%2BHwmcQj2EfwoaInN%2B4VGrh4sjyZ9FYFG7G7RJ9waYObdO8tKYNN9afZRv0d0iaC0dPFyNu%2Fzkp5UakhAyL2b6%2FWR229ew%2F2ZagqASevJsK7poNoOYSHoF%2Bvtndvwe0hEoDb2tAn2zKXWqht4H1lLJYjG1EmnHwt9pgGjJUmUYFrBwCkM2IwSqo%2BOWZKo%2BQDT6w5i2EcFewjnZ710P47PAfo0VuVsrFr5ZBB%2B%2FRqpINb2GYQrdR5F9QVnrXG76bcAecMba89jSWJWEZX8a10fUO1%2B8gyS%2Bq%2BPGy7q%2FXFqgMuGagT9U2m8Dv8KZrw0GgmTKP7ibs0QippTvLsC098QltEiKrPbv18Ld7uSIud88fDSqIGNXGQAWMjoCxcPsAluriSQbhn37r2vYy87EqWIzmAi7%2F80NQ%2F03RKDLh14A5jIHxUN7du1w3PTnCT6BSWBS9W4EfRf3zD%2FVBPJP6mNHz7p1AMiFKg94C4RNBxYUaKyx2dNGg0xeIDt480CMUfpqFHJSA8gjksYxK2Y%2FZaFnG8m4aTYsdD3t4jmSB176x5EHTjgl50mtRzUk%2BPvdv7gTlqBGrh0Z5tUeTFTky9G2%2B02CtaaBaolFzp6W1OveMDkdOiEAYK5GgMTcEUROdLKo1rOkfA3CDwZOZCHS8dka%2FQtaAkoqU%2BG6W6AlocAAmAnqwUMfsSw8xy82E23qQ%2F%2BeUPBbT%2BEa8F9chdYo%2Bb%2Fhg2DtMksVo%2BglgMAHMKIRik5sefmszgRGkN7uatQwwJCtrwY6sgG0oWMc9a3J48e4kvAj8bbAqO3DpNLle%2BysQtgaRPLLaXM03pGW5SaSeCqFQIANud5%2Bt%2FL57r%2Bdhgh42MQj69rZEL8DbFm0V2bI9gY32vHPAcG0xX92QmOBzv%2Fm0HMHDc%2BRK9nU9gmRIMUScl7uqx1MF9hYX6%2B1CbLkJROj22iI2lWh84NBDNJBqBN2FueSRngMF%2F%2FTQmMrlZAqISRdC7qNcEZvGypIuoshLtIUxHh1SpVG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240308T181237Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFONOKEIRF%2F20240308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=1db4212edacbdfe1a86baeb9e8cf39af31a188a82573f722cd937573a01e93ff",
+          "url": "https://www.drinkbai.com/recipes/cocktails-and-mocktails/cart-path-only"
+      },
+      "_links": {
+          "self": {
+              "title": "Self",
+              "href": "https://api.edamam.com/api/recipes/v2/cc374cfdb596b72fdfa76aa91d838b80?type=public&app_id=e2ed7e31&app_key=8ef08d22b3f6543dfc37df14ac65e04d"
+          }
+      }
+  },
+  {
+      "recipe": {
+          "label": "Tanzania 28 Cocktail",
+          "image": "https://edamam-product-images.s3.amazonaws.com/web-img/974/974dc081880318535a7728b4ceb88e01.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIC5E%2Bg68DW6NO0E8xDSfVzd3x2OrGrrOLvt49%2BKywQP6AiBDdMyswmIKYAmrSqzRjsSEHfiYcwrcmZ60qLGHiRaPyyrCBQja%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIMOoP1Wr5%2FzAUS9cCmKpYFW4ri5F0rB4bbo%2Bb5hADVW%2BdnKWXrqzdplFvbivyu1suJvv4r5e2SUG7vtpwETkBsuzoCsBBPjB4N4fRe33wxysO5jt1rOnrDS6fG1PL%2BwEHn%2FplbBVv3inT%2BHwmcQj2EfwoaInN%2B4VGrh4sjyZ9FYFG7G7RJ9waYObdO8tKYNN9afZRv0d0iaC0dPFyNu%2Fzkp5UakhAyL2b6%2FWR229ew%2F2ZagqASevJsK7poNoOYSHoF%2Bvtndvwe0hEoDb2tAn2zKXWqht4H1lLJYjG1EmnHwt9pgGjJUmUYFrBwCkM2IwSqo%2BOWZKo%2BQDT6w5i2EcFewjnZ710P47PAfo0VuVsrFr5ZBB%2B%2FRqpINb2GYQrdR5F9QVnrXG76bcAecMba89jSWJWEZX8a10fUO1%2B8gyS%2Bq%2BPGy7q%2FXFqgMuGagT9U2m8Dv8KZrw0GgmTKP7ibs0QippTvLsC098QltEiKrPbv18Ld7uSIud88fDSqIGNXGQAWMjoCxcPsAluriSQbhn37r2vYy87EqWIzmAi7%2F80NQ%2F03RKDLh14A5jIHxUN7du1w3PTnCT6BSWBS9W4EfRf3zD%2FVBPJP6mNHz7p1AMiFKg94C4RNBxYUaKyx2dNGg0xeIDt480CMUfpqFHJSA8gjksYxK2Y%2FZaFnG8m4aTYsdD3t4jmSB176x5EHTjgl50mtRzUk%2BPvdv7gTlqBGrh0Z5tUeTFTky9G2%2B02CtaaBaolFzp6W1OveMDkdOiEAYK5GgMTcEUROdLKo1rOkfA3CDwZOZCHS8dka%2FQtaAkoqU%2BG6W6AlocAAmAnqwUMfsSw8xy82E23qQ%2F%2BeUPBbT%2BEa8F9chdYo%2Bb%2Fhg2DtMksVo%2BglgMAHMKIRik5sefmszgRGkN7uatQwwJCtrwY6sgG0oWMc9a3J48e4kvAj8bbAqO3DpNLle%2BysQtgaRPLLaXM03pGW5SaSeCqFQIANud5%2Bt%2FL57r%2Bdhgh42MQj69rZEL8DbFm0V2bI9gY32vHPAcG0xX92QmOBzv%2Fm0HMHDc%2BRK9nU9gmRIMUScl7uqx1MF9hYX6%2B1CbLkJROj22iI2lWh84NBDNJBqBN2FueSRngMF%2F%2FTQmMrlZAqISRdC7qNcEZvGypIuoshLtIUxHh1SpVG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240308T181237Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFONOKEIRF%2F20240308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=32ccafd4a65a8ce04f586eacf72832738e700840e9f3753d0225176e3f53a803",
+          "url": "https://www.justataste.com/tanzania-28-cocktail/"
+      },
+      "_links": {
+          "self": {
+              "title": "Self",
+              "href": "https://api.edamam.com/api/recipes/v2/c0423275c912835cfedfd0cee4d8f0c3?type=public&app_id=e2ed7e31&app_key=8ef08d22b3f6543dfc37df14ac65e04d"
+          }
+      }
+  },
+  {
+      "recipe": {
+          "label": "Yellow Coconut Rice (Tanzania)",
+          "image": "https://edamam-product-images.s3.amazonaws.com/web-img/010/010504aaff44de4e95f2e771b7afed93.jpg?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEOL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCIC5E%2Bg68DW6NO0E8xDSfVzd3x2OrGrrOLvt49%2BKywQP6AiBDdMyswmIKYAmrSqzRjsSEHfiYcwrcmZ60qLGHiRaPyyrCBQja%2F%2F%2F%2F%2F%2F%2F%2F%2F%2F8BEAAaDDE4NzAxNzE1MDk4NiIMOoP1Wr5%2FzAUS9cCmKpYFW4ri5F0rB4bbo%2Bb5hADVW%2BdnKWXrqzdplFvbivyu1suJvv4r5e2SUG7vtpwETkBsuzoCsBBPjB4N4fRe33wxysO5jt1rOnrDS6fG1PL%2BwEHn%2FplbBVv3inT%2BHwmcQj2EfwoaInN%2B4VGrh4sjyZ9FYFG7G7RJ9waYObdO8tKYNN9afZRv0d0iaC0dPFyNu%2Fzkp5UakhAyL2b6%2FWR229ew%2F2ZagqASevJsK7poNoOYSHoF%2Bvtndvwe0hEoDb2tAn2zKXWqht4H1lLJYjG1EmnHwt9pgGjJUmUYFrBwCkM2IwSqo%2BOWZKo%2BQDT6w5i2EcFewjnZ710P47PAfo0VuVsrFr5ZBB%2B%2FRqpINb2GYQrdR5F9QVnrXG76bcAecMba89jSWJWEZX8a10fUO1%2B8gyS%2Bq%2BPGy7q%2FXFqgMuGagT9U2m8Dv8KZrw0GgmTKP7ibs0QippTvLsC098QltEiKrPbv18Ld7uSIud88fDSqIGNXGQAWMjoCxcPsAluriSQbhn37r2vYy87EqWIzmAi7%2F80NQ%2F03RKDLh14A5jIHxUN7du1w3PTnCT6BSWBS9W4EfRf3zD%2FVBPJP6mNHz7p1AMiFKg94C4RNBxYUaKyx2dNGg0xeIDt480CMUfpqFHJSA8gjksYxK2Y%2FZaFnG8m4aTYsdD3t4jmSB176x5EHTjgl50mtRzUk%2BPvdv7gTlqBGrh0Z5tUeTFTky9G2%2B02CtaaBaolFzp6W1OveMDkdOiEAYK5GgMTcEUROdLKo1rOkfA3CDwZOZCHS8dka%2FQtaAkoqU%2BG6W6AlocAAmAnqwUMfsSw8xy82E23qQ%2F%2BeUPBbT%2BEa8F9chdYo%2Bb%2Fhg2DtMksVo%2BglgMAHMKIRik5sefmszgRGkN7uatQwwJCtrwY6sgG0oWMc9a3J48e4kvAj8bbAqO3DpNLle%2BysQtgaRPLLaXM03pGW5SaSeCqFQIANud5%2Bt%2FL57r%2Bdhgh42MQj69rZEL8DbFm0V2bI9gY32vHPAcG0xX92QmOBzv%2Fm0HMHDc%2BRK9nU9gmRIMUScl7uqx1MF9hYX6%2B1CbLkJROj22iI2lWh84NBDNJBqBN2FueSRngMF%2F%2FTQmMrlZAqISRdC7qNcEZvGypIuoshLtIUxHh1SpVG&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240308T181237Z&X-Amz-SignedHeaders=host&X-Amz-Expires=3600&X-Amz-Credential=ASIASXCYXIIFONOKEIRF%2F20240308%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=543aa74351bb06d16451740c6d688174dd0b20504d700974a4ad9c6e00041285",
+          "url": "http://www.food.com/recipe/yellow-coconut-rice-tanzania-174953"
+      },
+      "_links": {
+          "self": {
+              "title": "Self",
+              "href": "https://api.edamam.com/api/recipes/v2/4ce2abed076ecfae1862c249c7110fe7?type=public&app_id=e2ed7e31&app_key=8ef08d22b3f6543dfc37df14ac65e04d"
+          }
+      }
+  }
+  ]
+}

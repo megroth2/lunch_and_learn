@@ -7,7 +7,7 @@ class UserSerializer
     {
       data: {
         type: "user",
-        id: user.id, ## oops, just realized this was hard coded so I need to fix
+        id: user.id,
         attributes: {
           name: user.name,
           email: user.email,

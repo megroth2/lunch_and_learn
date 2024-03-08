@@ -90,4 +90,11 @@ end
     config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
     config.hook_into :webmock
     config.configure_rspec_metadata!
+    # Set up an ignore request callback for specific URLs so the random country selection is tested using a webmock stub request
+    config.ignore_request do |request|
+      uri = URI(request.uri)
+      (uri.host == 'restcountries.com' && uri.path == '/v3.1/all' && uri.query == 'fields=name') ||
+        (uri.host == 'api.edamam.com' && uri.path == '/api/recipes/v2')
+    end
+
   end
